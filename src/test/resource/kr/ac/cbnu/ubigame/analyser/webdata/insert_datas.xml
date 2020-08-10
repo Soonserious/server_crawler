@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<article id="1" journal="KBS" articleTitle="testtitle" articleBody="testbody"
+		targetCompany="samsung" date="2017-01-01" targetUrl="123.com" journalId="123"/>
+	<article id="2" journal="Pressian" articleTitle="temp2 타이틀" articleBody="test2 내용"
+		targetCompany="삼성" date="2017-01-01" targetUrl="123.com" journalId="123"/>
+</dataset>
+

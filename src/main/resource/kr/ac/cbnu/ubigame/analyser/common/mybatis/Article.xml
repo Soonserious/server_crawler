@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Article">
+	<insert id="InsertArticle" parameterType="WebDatatype">
+		INSERT INTO ARTICLE
+		(
+			id, journal, targetCompany, articleTitle, articleBody, date, targetUrl, journalId
+		) 
+		VALUES
+		(
+			#{id}, #{journal}, #{targetCompany}, #{articleTitle}, #{articleBody}, #{date}, #{targetUrl}, #{journalId}
+		)
+	</insert>
+   
+    <select id="getId" resultType="java.lang.Integer">
+        SELECT MAX(id) FROM ARTICLE
+    </select>
+   
+    <select id="Getdate" parameterType="String" resultType="Date">
+    	SELECT MAX(date) FROM(
+    		SELECT * FROM ARTICLE WHERE targetCompany = #{targetCompany} 
+    	)Find
+    </select>
+	
+</mapper>
+

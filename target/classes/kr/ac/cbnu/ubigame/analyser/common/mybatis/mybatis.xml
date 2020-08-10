@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<!-- <typeAlias type="kr.ac.cbnu.computerengineering.common.datatype.UserDataType" alias="UserDataType" /> -->
+		<typeAlias type="kr.ac.cbnu.ubigame.analyser.common.datatype.CompanyDatatype" alias="CompanyDatatype" />
+		<typeAlias type="kr.ac.cbnu.ubigame.analyser.common.datatype.WebDatatype" alias="WebDatatype" />
+		<typeAlias type="java.sql.Date" alias = "Date"/>
+	
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://210.115.170.130:3306/analyser"/>
+				<property name="username" value="analyser"/>
+				<property name="password" value="e8-1423"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<!--<mapper resource="kr/ac/cbnu/ubigame/analyser/common/mybatis/Article.xml"/>-->
+		<mapper resource = "kr/ac/cbnu/ubigame/analyser/common/mybatis/NonPress.xml"/>
+	</mappers>
+</configuration>
+
